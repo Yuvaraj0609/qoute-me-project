@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quote Result</title>
+</head>
+<body>
+    <h2>Quote Submitted Successfully</h2>
+    <p><strong>From:</strong> {{ quote.from_country }} ({{ quote.from_postcode }})</p>
+    <p><strong>To:</strong> {{ quote.to_country }} ({{ quote.to_postcode }})</p>
+    <p><strong>Quantity:</strong> {{ quote.quantity }}</p>
+    <p><strong>Weight:</strong> {{ quote.weight }} kg</p>
+    <p><strong>Dimensions (L×W×H):</strong> {{ quote.length }} × {{ quote.width }} × {{ quote.height }} cm</p>
+</body>
+</html>

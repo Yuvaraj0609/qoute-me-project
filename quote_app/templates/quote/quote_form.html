@@ -118,6 +118,16 @@
     <div class="form-wrapper">
         <form method="post" style="display: flex; flex-wrap: wrap; gap: 15px; width: 100%;">
             {% csrf_token %}
+            <div class="form-group">
+    <label for="id_from_country">From Country</label>
+    {{ form.from_country }}
+</div>
+
+<div class="form-group">
+    <label for="id_to_country">To Country</label>
+    {{ form.to_country }}
+</div>
+
 
             <div class="form-group">
                 <label for="id_from_postcode">From Postcode</label>
