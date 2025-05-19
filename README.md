@@ -19,7 +19,8 @@ This project is a Django-based web application that replicates the **"Quote Me"*
 
 ## 📸 Screenshots
 
-> Add screenshots or screen recordings of your project UI here (optional but recommended).
+> <img width="959" alt="image" src="https://github.com/user-attachments/assets/06211903-a0f2-4d53-9c23-eab225447c33" />
+
 
 ## 📂 Project Structure
 
