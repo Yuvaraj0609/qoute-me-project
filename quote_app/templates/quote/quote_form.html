@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quote Me</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #3EC4F3, #9450E6);
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin: 40px 0 20px;
+            color: #321C64;
+        }
+
+        .form-wrapper {
+            max-width: 1200px;
+            margin: auto;
+            background: #321C64;
+            border-radius: 15px;
+            padding: 30px;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: space-between;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 180px;
+            min-width: 160px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 12px;
+            font-size: 14px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .btn {
+            background: #ff0080;
+            padding: 15px 30px;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: auto;
+            align-self: flex-end;
+        }
+
+        .units-toggle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .toggle-switch {
+            appearance: none;
+            width: 40px;
+            height: 20px;
+            background: #ccc;
+            border-radius: 10px;
+            position: relative;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .toggle-switch:checked {
+            background: #a64bf4;
+        }
+
+        .toggle-switch::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 16px;
+            height: 16px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .toggle-switch:checked::before {
+            transform: translateX(20px);
+        }
+
+        @media (max-width: 768px) {
+            .form-wrapper {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn {
+                align-self: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Shipping made simple</h2>
+    <div class="form-wrapper">
+        <form method="post" style="display: flex; flex-wrap: wrap; gap: 15px; width: 100%;">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="id_from_postcode">From Postcode</label>
+                {{ form.from_postcode }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_to_postcode">To Postcode</label>
+                {{ form.to_postcode }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_quantity">Quantity</label>
+                {{ form.quantity }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_weight">Weight (kg)</label>
+                {{ form.weight }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_length">Length (cm)</label>
+                {{ form.length }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_width">Width (cm)</label>
+                {{ form.width }}
+            </div>
+
+            <div class="form-group">
+                <label for="id_height">Height (cm)</label>
+                {{ form.height }}
+            </div>
+
+            <button type="submit" class="btn">QUOTE ME</button>
+
+            <div class="units-toggle">
+                <label>kg/cm</label>
+                <input type="checkbox" class="toggle-switch">
+                <label>lb/in</label>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
