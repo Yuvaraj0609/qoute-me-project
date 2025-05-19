@@ -9,6 +9,7 @@ This project is a Django-based web application that replicates the **"Quote Me"*
 - Integration with **MariaDB** for backend data handling
 - User-friendly UX inspired by ParcelHero
 - Modular Django app structure
+- An API to fetch Orders
 
 ## 🛠️ Tech Stack
 
@@ -19,7 +20,8 @@ This project is a Django-based web application that replicates the **"Quote Me"*
 
 ## 📸 Screenshots
 
-> <img width="959" alt="image" src="https://github.com/user-attachments/assets/06211903-a0f2-4d53-9c23-eab225447c33" />
+> <img width="959" alt="image" src="https://github.com/user-attachments/assets/3e5a9430-9667-4558-9af7-b67e50df6a04" />
+
 
 
 ## 📂 Project Structure
