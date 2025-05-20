@@ -27,19 +27,13 @@ This project is a Django-based web application that replicates the **"Quote Me"*
 ## 📂 Project Structure
 
 ```bash
-qoute-me-project/
-├── manage.py
-├── quote_me/              # Main Django app
-│   ├── migrations/
-│   ├── templates/
-│   │   └── quote_me/
-│   │       └── index.html
-│   ├── static/
-│   ├── views.py
-│   ├── urls.py
-│   └── models.py
-├── qoute_me_project/      # Project settings
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-└── README.md
+C:.
+├───quote_app
+│   ├───migrations
+│   │   └───__pycache__
+│   ├───templates
+│   │   └───quote
+│   └───__pycache__
+├───quote_project
+│   └───__pycache__
+└───static
